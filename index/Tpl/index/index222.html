@@ -1,0 +1,128 @@
+<load file="__TPL__/index/header.html">
+<!-- 轮播图结束，今日特惠部分-->
+<script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+<script>
+  var app="__APP__";
+</script>
+      <div id="tabs" class="border0">
+        <div class="tabs_ul">
+          <span class="more"><a href="__APP__/index/more?type=0">更多</a></span>
+            <ul>
+                <li><div class="bg"><a href="#tabs-1" class="tttt">今日特惠</a></div></li>
+                <li><a href="#tabs-2" class="tttt">特惠住宿</a></li>
+                <li><a href="#tabs-3" class="tttt">特惠门票</a></li>
+            </ul>
+            </div>
+            <div id="tabs-1" class="border-top0">
+              <foreach from="$tehuiData" value="$v">
+                <div class="dimg">
+                  <div style="position:relative;">
+                    <a href="__APP__/{$v.control}/detail?{$v.key}={$v.val}"><img src="__ROOT__/{$v.img}" width="275" height="150"/>
+                      <span class="opica" style="width:100%;height:20px;padding:5px 0px;position:absolute;bottom:0px;left:0px;z-index:100;color:#FAFBFA;font-size:14px;background:#325378">
+                          {$v.alt}
+                      </span>
+                  </div>
+                 
+                </div>
+              </foreach>
+            </div>
+            <div id="tabs-2" class="border-top0">
+              <foreach from="$tehuiHotel" value="$v">
+                <div class="dimg">
+                  <div><a href="__APP__/index/detail?hid={$v.hid}"><img src="__ROOT__/{$v.img}" width="275" height="150"/></div>
+                 
+                 
+                </div>
+              </foreach>
+            </div>
+            <div id="tabs-3" class="border-top0">
+              <foreach from="$tehuiTicket" value="$v">
+                <div class="dimg">
+                  <div><a href="__APP__/ticket/detail?tid={$v.tid}"><img src="__ROOT__/{$v.img}" width="275" height="150"/></div>
+                  
+                 
+                </div>
+              </foreach>
+            </div>
+        </div>
+<!--超值酒店部分  -->
+    <div class="hr_line">
+      <p style="font-size:18px; margin-bottom:3px; font-weight:600; color:#2B91D5; font-family:"宋体"">超值推荐酒店</p>
+    </div>  
+    <div class="tag-filter" style="border:none">
+                <ul>
+                    <li><a class="selected" aid="1">北戴河</a></li>
+                    <li><a data-filter=".travel" aid="4">南戴河</a></li>
+                    <li><a data-filter=".holidays" aid="2">秦皇岛</a></li>
+                    <li><a data-filter=".hotel" aid="3">山海关</a></li>
+                    <li><a data-filter=".hotel" aid="5">昌黎黄金海岸</a></li>
+                    <li><a data-filter=".hotel" aid="6">周边地区</a></li>
+                </ul>
+        <span class="more" style="font-size:14px"><a href="__APP__/index/more?type=1">更多</a></span>
+         </div>
+         <div class="tag-filter-container">
+        <foreach from="$hotelData" value="$v">
+        <div class="one-fourth travel">
+          <div class="post-item">
+            <div class="image-place">
+              <a href="__APP__/index/detail?hid={$v.hid}"><img src="__ROOT__/{$v.img}" alt="image" width="220px;" height="135px;"/>  
+              </a>          
+              </div>
+            <div class="post-content">
+               <a href="__APP__/index/detail?hid={$v.hid}"><h2 class="post-title">{$v.hname}</h2></a>
+              <!--<p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus vehicula dui.</p> -->
+            </div>
+            <div class="post-meta">
+              <span class="comment-count" style="font-size:15px;">特价:￥{$v.tprice}</span>
+              <a class="read-more" href="__APP__/index/detail?hid={$v.hid}">查看</a>           
+            </div>
+          </div>
+        </div>
+        </foreach>
+        
+       
+      </div>
+   <!--特色门票部分-->
+     <!--景点 --> 
+  <div id="jingdian" style="position:relative;">
+
+      <div class="jingdiantag" style="border:none;">
+                <ul class="tag-filterd">
+                    <li><a class="selected" data-filter="*" aid="2">秦皇岛</a></li>
+                    <li><a data-filter=".travel" aid="1">北戴河</a></li>
+                    <li><a data-filter=".holidays" aid="4">南戴河</a></li>
+                    <li><a data-filter=".hotel" aid="3">山海关</a></li>
+                    <li><a data-filter=".hotel" aid="5">昌黎黄金海岸</a></li>
+                </ul>
+        <span class="more"><a href="__APP__/index/more?type=2" style="top:0px;">更多</a></span>
+         </div>
+         <div class="jingdian_list" style="clear:both;">
+          <ul>
+            <foreach from="$ticketData" value="$v">
+            <li>
+          <a href="__APP__/Ticket/detail?tid={$v.tid}">
+            <img width="224" height="135" alt="" src="__ROOT__/{$v.img}"/>
+          </a>
+        <h3 style="width:100%">{$v.tname}</h3>
+        <p>{$v.describe}</p>
+        <div>
+        <h4>￥{$v.tprice}</h4>
+        <h4 class="next">满意度{$v.man}</h4>
+      </div>
+        </li>
+      </foreach>
+          </ul>
+         </div>
+
+    </div>
+</div>
+<load file="__TPL__/index/footer.html">
+</div>
+     <script type="text/javascript">
+        $(document).ready(function () {
+            $("#tabs").tabs();
+        })
+    </script>
+    
+</body>
+</html>

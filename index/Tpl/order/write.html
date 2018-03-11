@@ -1,0 +1,72 @@
+<load file="__TPL__/index/header.html">
+<script type="text/javascript" src="__PUBLIC__/js/write.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/css/detail.css" />
+<script type="text/javascript" src="__ROOT__/hdphp/hdjs/org/cal/lhgcalendar.min.js"></script>
+<div id="position">
+	<p class="pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;<a href="__APP__/index/more?type=1&htype=1">宾馆酒店</a>&nbsp;>&nbsp;酒店预订页面</p>
+	<p class="pos2">电话预定 : 400-889-3178</p>
+</div>
+<div class="order_img">
+	<img src="__PUBLIC__/images/order_notice.gif"/>
+</div>
+<div class="order_content">
+	<div class="hotel_yuding_shang"></div>
+	<div class="inner_content">
+		<form action="__APP__/order/pay" method="post">
+			<input type="hidden" id="price_ping" value="{$price.price_ping}"/>
+			<input type="hidden" id="price_mo" value="{$price.price_mo}"/>
+			<input type="hidden" value="{$price.price}" name="price"/>
+			<input type="hidden" value="{$price.cid}" name="cid"/>
+			<input type="hidden" value="{$price.hid}" name="hid"/>
+			<div class="order_top">
+				<div class="order_top_p"><p><span class="bg1"></span><span style="float:left;display:inline-block;">{$price.name}
+				</span>
+				<!--酒店支付type为1，门票的为2-->
+				<input type="hidden" name="price_type" value="1"/>
+					<input type="hidden" name="name" value="{$price.name}"/></p></div>
+				<ul>
+					<li>房间类型：&nbsp;&nbsp;{$price.cname}</li>
+					<li>入住时间：&nbsp;&nbsp;<span>
+						<input type="text" readonly="readonly" id="updatetime" name="updatetime"value="{|date:'Y-m-d'}" style="width:90px;"/>
+						&nbsp;<span id="week1">周五</span>
+					</span> 至 &nbsp;
+					<input type="text" readonly="readonly" id="updatetime2" name="updatetime2"value="<?php echo date("Y-m-d",strtotime("+1 day"))?>" style="width:90px;"/>
+					&nbsp;<span id="week2">周六</span>
+					&nbsp;&nbsp;<span id="num"> 1</span>晚 <input type="hidden" name="days" id="days"/>
+					<li id="dingprice"><span style="float:left;">预订间数：&nbsp;&nbsp;</span><span class="ding" id="jian" >-</span><span><span id="ding" class="ding">1</span><input type="hidden" id="dingNum" name="num" value="1"/></span><span class="ding" id="jia">+</span><span style="font-size:12px;color:#7F7F7F;">&nbsp;&nbsp;(每增加一间房间，需要填写姓名)</span></li>
+					<li>应付金额：&nbsp;&nbsp;<span style="color:#FE6410;font-size:22px;font-weight:bold;">￥<input type="hidden" id="total_price" name="total_price"/><span id="priceall"></span></li>
+					<li class="notices"><p><span style="float: left;font-size:12px;color:#7F7F7F;padding-bottom: 15px;">&nbsp;&nbsp;(订单提交后，工作人员会立即处理向您回复预订结果，请耐心等待)</span></p></li>
+				</ul>
+			</div>
+			<div class="order_bottm">
+				<div class="order_top_p">
+					<p><span class="bg2"></span><span style="float:left;display:inline-block;">入住信息</span>
+					</p>
+				</div>
+					<div class="info">
+						<div id="room_name" style="">
+						<p style="" id="name" class="name"><span style="color:#F49D56;">*</span><span>入住人姓名：</span>
+							<input type="text" name="oname[]" value="" class="ftname"/>
+						</p>
+					</div>
+					<div style="clear:both;">
+						<p><span style="color:#F49D56">*</span>手机号码：&nbsp;&nbsp;&nbsp;</span>
+							<input type="text" name="telephone" class="tel"/>
+							<span style="font-size:12px;color:#7F7F7F;">&nbsp;&nbsp;(订单消息会发送至您的<span style="color:#FF7B28;font-weight:bold;">手机</span>上，请保持畅通)</span>
+						</p>
+						<p style="font-size:12px;color:#7F7F7F;">&nbsp;&nbsp;&nbsp;&nbsp;(该酒店14:00办理入住,提前到店可能需要等待)</p>
+					</div>
+					</div>
+			</div>
+	</div>
+		<div class="hotel_yuding_xia"></div>
+</div>
+<div id="gopay">
+	<input type="submit" class="sub" value=""/>
+</div>
+</form>
+<load file="__TPL__/index/footer.html">
+<script>
+ $('#updatetime').calendar({format: 'yyyy-MM-dd'});
+ $('#updatetime2').calendar({format: 'yyyy-MM-dd'});
+ </script>

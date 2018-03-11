@@ -1,0 +1,248 @@
+#ticket_con{
+	width: 980px;
+	margin: 0px auto;
+}
+/*人气榜*/
+#renqibang{
+	width: 980px;
+	height: 261px;
+	margin: 0px auto;
+    background: url("../images/renqibang_bj.gif");
+
+ }
+ #renqibang ul{
+ 	float: left;
+	margin-top: 18px;
+	margin-left: 200px;
+} 
+ #renqibang ul li{
+ 	float: left;
+    padding-right: 20px;
+}
+#renqi_item{
+
+	width: 220px;
+	height: 220px;
+	border: 1px solid #ECECEC;
+}
+
+.renqi_biaoti a{
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: 微软雅黑;
+   color: #666666;
+   text-decoration:none;	
+}
+.renqi_biaoti a:hover{color: red;}
+.renqi_meta{
+	float: left;
+	width: 220px;
+	margin-top: 15px;
+}
+
+.renqi_meta_manyidu{
+
+	margin-right: 10px;
+	color: #A5A5A5;
+	font-size: 14px;
+	font-family: 微软雅黑;
+}
+
+/*人气榜结束*/
+
+#menpiao_all{
+	float: left;
+	width: 980px;
+	height: 500px;
+	margin-top: 10px;
+	background: url("../images/menpiao_all.gif");
+}
+.menpiao_all_quyu{
+    float: left;
+	width: 760px;
+	margin: 0px auto;
+}
+.menpiao_all_quyu ul{
+float: left;
+padding-left: 28px;
+}
+ .menpiao_all_quyu li{
+ 	float: left;
+ 	padding-top: 4px;
+ 	padding-right: 22px;
+ 	padding-bottom: 15px;
+}
+
+/*门票详情页*/
+#img_zuo{
+	float: left;
+	width: 510px;
+}
+.img_zuo_da {
+	float: left;
+	height: 288px;
+
+}
+.img_zuo_xiao ul{
+float: left;
+margin-top: 5px;
+padding-left: 0px;
+}
+.img_zuo_xiao ul li{
+float: left;
+padding-right: 5px;
+}
+/*右侧信息*/
+.ticket_info strong{
+	float: left;
+	font-weight: bold;
+	font-size: 25px;
+	letter-spacing: 2px;
+	padding-top: 5px;
+	padding-left: 50px;
+	}
+
+.myd{
+	font-family:微软雅黑;
+	font-size:25px;
+	color:#FF6600;
+	font-weight: bold;
+	display:table-cell;
+	vertical-align:bottom;
+	height:55px;
+	padding-left:15px;
+}
+.myd2{
+	font-family:微软雅黑;font-size:15px;color:#7F7F7F;display:table-cell;padding-left:10px;padding-top:30px;
+}
+
+.add{
+	font-family:微软雅黑;font-size:15px;color:#2F2F2F;font-weight: bold;display:table-cell;vertical-align:bottom;height:25px;padding-left:15px;
+}
+.add img{
+	float: right;
+	margin: 0px auto;
+}
+.add2{
+	font-family:微软雅黑;font-size:15px;color:#7F7F7F;display:table-cell;vertical-align:bottom;height:25px;
+}
+.jiage_big{
+	font-family:微软雅黑;
+	font-size:45px;
+	color:#FF6600;
+	font-weight: bold;
+	display:table-cell;
+	vertical-align:bottom;
+	height:90px;
+	padding-left:15px;
+}
+.jiage_old{
+	font-size:15px;
+	color:#7F7F7F;
+	display:table-cell;
+    padding-top: 62px;
+    text-decoration:line-through; 
+}
+.jiage_img{
+padding-left: 60px;
+	display:table-cell;
+	text-decoration:line-through;
+}
+/*门票介绍*/
+#ticket_info{
+	float: left;
+	width: 980px;
+	margin: 0px auto;
+}
+#ticket_info_text{
+	float: left;
+	width: 980px;
+	margin: 20px auto;
+	border: 1px solid;
+	border-top-color:#CCCCCC;
+	border-left-color:#1BA9B9;
+	border-right-color:#1BA9B9;
+	border-bottom-color:#1BA9B9;
+}
+#ticket_info_text span{
+	float: left;
+	padding: 0px 20px 20px 20px;
+	line-height: 30px;
+	font-size: 14px;
+    color: #535353;
+    text-indent:2em;
+  
+   }
+#ticket_info_yudingxuzhi{
+	float: left;
+	width: 980px;
+	margin: 20px auto;
+	border: 1px solid #DDDDDD;
+	background: url("../images/menpiao_yudingxuzhi_bj.gif");
+	
+}
+.ticket_xuzhi{
+	padding-bottom: 20px;
+}
+
+.xuzhi_biaoti {
+	width: 110px;
+	text-align: center;
+    padding-left: 3px;
+    padding-top: 25px;
+    display:table-cell;
+    vertical-align: top;
+    font-size: 14px;
+    color: #535353;
+}
+.xuzhi_neirong{
+	width: 800px;
+	padding-left: 15px;
+	line-height: 25px;
+	padding-top: 20px;
+	font-size: 14px;
+	color: #535353;
+}
+/*门票预订*/
+#menpiao_order{
+float: left;
+margin: 0px auto;
+}
+#position{
+	width: 980px;
+	height:50px;
+	padding:5px 2px;
+	}
+#position p{line-height: 10px;margin-bottom: 3px;}
+#position .pos1{float:left;font-size: 14px;}
+#position .pos2{
+	float:right;
+	font-size: 16px;
+	font-weight: bold;
+	color:#FC8958;  
+	margin: 15px auto;
+
+}
+.xiantiao{
+	border-bottom: solid 3px #3A83E6; 
+	margin-top: 35px;
+}
+#menpiao_order_content{
+	width:980px;
+	height: 527px;
+	background: url("hotel_yuding.gif");
+	margin-top: 20px;
+}
+
+
+
+
+#gopay .sub{width:139px;height:42px;background: url("pay.gif");margin-top: 40px;}
+
+
+
+
+
+
+

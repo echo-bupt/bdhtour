@@ -1,0 +1,47 @@
+<load file="__TPL__/index/header.html">
+<link rel="stylesheet" href="__PUBLIC__/css/liebiao.css" />
+<script>
+var app="__APP__";
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/liebiao.js"></script>
+<div id="menpiao_position">
+	<p class="menpiao_pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;<a href="__APP__/index/more?type=1&htype={$data.htype}">{$data.poname}</a>&nbsp;>&nbsp;{$data.descri}</p>
+	<p class="menpiao_pos2">电话预定 : 400-889-3178</p>
+</div>
+<div id="contents">
+      <div class="tag-filter" style="border:none" htype="{$data.htype}">
+                <ul>
+                    <li><a class="selected" aid="1">北戴河</a></li>
+                    <li><a data-filter=".travel" aid="4">南戴河</a></li>
+                    <li><a data-filter=".holidays" aid="2">秦皇岛</a></li>
+                    <li><a data-filter=".hotel" aid="3">山海关</a></li>
+                    <li><a data-filter=".hotel" aid="5">昌黎黄金海岸</a></li>
+                    <li><a data-filter=".hotel" aid="6">周边地区</a></li>
+                </ul>
+        
+         </div>
+  <div class="container" htype="{$htype}">
+	<foreach from="$hotelData" value="$v">
+        <div class="one-fourth travel">
+          <div class="post-item">
+            <div class="image-place">
+              <a href="__APP__/index/detail?hid={$v.hid}"><img src="__ROOT__/{$v.img}" alt="image" width="220px;" height="135px;"/>  
+              </a>          
+              </div>
+            <div class="post-content">
+               <a href="__APP__/index/detail?hid={$v.hid}"><h2 class="post-title">{$v.hname}</h2></a>
+              <!--<p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus vehicula dui.</p> -->
+            </div>
+            <div class="post-meta">
+              <span class="comment-count" style="font-size:15px;">特价:￥{$v.tprice}</span>
+              <a class="read-more" href="__APP__/index/detail?hid={$v.hid}">查看</a>           
+            </div>
+          </div>
+        </div>
+    </foreach>
+        <div class="page" style="clear:both;text-align:center;font-size:16px;">
+      {$page}
+      </div>
+  </div>
+</div>
+<load file="__TPL__/index/footer.html">

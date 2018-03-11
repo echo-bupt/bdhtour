@@ -1,0 +1,31 @@
+<load file="__TPL__/index/header.html">
+<link rel="stylesheet" href="__PUBLIC__/css/liebiao.css" />
+<cal/>
+<div id="position">
+	<p class="pos1">您所在的位置: 首页>&nbsp;&nbsp;{$data.poname}&nbsp;&nbsp;>{$data.descri}</p>
+	<p class="pos2">电话预定 : 400-889-3178</p>
+</div>
+<div id="contents">
+	<foreach from="$tehuiData" value="$v">
+        <div class="one-fourth travel">
+          <div class="post-item">
+            <div class="image-place">
+              <a href="__APP__/index/detail?{$v.key}={$v.val}"><img src="__ROOT__/{$v.img}" alt="image" width="220px;" height="135px;"/>  
+              </a>          
+              </div>
+            <div class="post-content">
+               <a href="__APP__/index/detail?{$v.key}={$v.val}"><h2 class="post-title">{$v.name}</h2></a>
+              <!--<p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus vehicula dui.</p> -->
+            </div>
+            <div class="post-meta">
+              <span class="comment-count" style="font-size:15px;">特价:￥{$v.tprice}</span>
+              <a class="read-more" href="__APP__/index/detail?{$v.key}={$v.val}">查看</a>           
+            </div>
+          </div>
+        </div>
+    </foreach>
+    <div class="page" style="clear:both;text-align:center;font-size:16px;">
+    	{$page}
+    </div>
+</div>
+<load file="__TPL__/index/footer.html">

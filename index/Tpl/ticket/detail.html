@@ -1,0 +1,71 @@
+<load file="__TPL__/index/header.html">
+    <script type="text/javascript" src="__PUBLIC__/js/detail.js"></script>
+<!-- <link rel="stylesheet" href="__PUBLIC__/css/reset.css" /> -->
+<link rel="stylesheet" href="__PUBLIC__/css/ticket.css" />
+<div id="menpiao_position">
+	<p class="menpiao_pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;<a href="__APP__/index/more?type=2">景区门票</a>&nbsp;>&nbsp;{$ticket.tname}</p>
+	<p class="menpiao_pos2">电话预定 : 400-889-3178</p>
+</div>
+
+<div id="ticket_tupian_jiage">
+    <!-- 景点门票详情页（左部分图片） -->
+    <div id="img_zuo">
+        <div class="img_zuo_da">
+        <img src="__ROOT__/{$first.img}" width="505px" height="320px" id="big"/>
+        </div>
+        <div class="img_zuo_xiao img_list">
+        <ul style="position:relative;margin-left:0px;">
+            <foreach from="{$next}" value="{$v}">
+                 <li style="list-style:none;"><img src="__ROOT__/{$v.img}" width="165px" height="95px;"></li></foreach>
+            <span style="position:absolute;z-index:100;padding-left:15px;width:80px;line-height:30px;height:30px;right:5px;bottom:4px;background:#645C67;"><a href="__APP__/ticket/moreImg/tid/{$ticket.tid}" style="color:#fff;" target="_blank">查看更多</a></span>
+        </ul>
+        </div>
+    </div>
+    <!-- 景点门票详情页（右部分信息） -->
+    <div id="jiage_you">
+        <div class="ticket_info">
+            <p><strong>{$ticket.tname}</strong></p></br>
+            <div class="menpiao_biaoti">AAAA 景区</div></br>
+                 <div class="ticket_info_kuan">
+            <p><span class="add">景点地址：</span><span class="add2">{$ticket.rel_ad}</span></p>
+            <p><span class="add">开放时间：</span><span class="add2">{$ticket.worktime}</span></p>
+            <p><span class="add">服务保障：<img src="__PUBLIC__/images/fuwubaozhang.gif" width="214px;" height="20px;" class="addimg"/></span></p>
+            <p><span class="myd">{$ticket.man}</span></span><span class="myd2">满意度</span></p>
+                </div>
+        </div>
+        <div class="ticket_jiage" style='clear:both;'>
+            <p style="clear:both;width:500px;"><span class="jiage_big">￥{$ticket.tprice}</span><span class="myd3" style="float:left;">起&nbsp;&nbsp;<span style="text-decoration:line-through; ">票面价：{$ticket.price}元</span></span><span class="jiage_img" style="clear:both;padding-top:45px;">
+            	<a href="__CONTROL__/write?tid={$ticket.tid}"><img src="__PUBLIC__/images/menpiao_yuding.gif" width="128px;" height="42px;"/>
+            	</a>
+            </span></p>
+        </div>
+    </div>
+</div>
+
+<div id="ticket_info">
+    <img src="__PUBLIC__/images/menpiao_info.gif" width="156px;" height="40px;"/>
+    <div id="ticket_info_text">
+        <img src="__PUBLIC__/images/menpiao_info_top.gif" width="980px;" height="25px;"/>
+    <span>{$ticket.des}</span>
+    </div>
+</div>
+
+<div id="ticket_yudingxuzhi">
+    <img src="__PUBLIC__/images/menpiao_yudingxuzhi.gif" width="156px;" height="40px;"/>
+    <div id="ticket_info_yudingxuzhi">
+
+    <table class="ticket_xuzhi" cellspacing="0" cellpadding="0" border="0" width="960px">
+        
+            <tr><td class="xuzhi_biaoti">1.开放时间：</td><td class="xuzhi_neirong">{$ticket.worktime}</td></tr>
+            <tr><td class="xuzhi_biaoti">2.特惠政策：</td><td class="xuzhi_neirong">{$ticket.t1}</td></tr>
+            <tr><td class="xuzhi_biaoti">3.温馨提示：</td><td class="xuzhi_neirong">{$ticket.t2}</td></tr>
+            <tr><td class="xuzhi_biaoti">4.交通指南：</td><td class="xuzhi_neirong">{$ticket.t3}</td></tr>
+
+        
+    
+
+    
+    </table>
+    </div>
+</div>
+<load file="__TPL__/index/footer.html">

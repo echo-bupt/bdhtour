@@ -1,0 +1,84 @@
+<load file="__TPL__/Index/header.html">
+<script type="text/javascript" src="__PUBLIC__/js/ticket_2.js"></script>
+<script type="text/javascript" src="__ROOT__/hdphp/hdjs/org/cal/lhgcalendar.min.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/css/ticket.css" />
+<div id="menpiao_position">
+	<p class="menpiao_pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;<a href="__APP__/index/more?type=2">景区门票</a>&nbsp;>&nbsp;门票预定页面</p>
+	<p class="menpiao_pos2">电话预定 : 400-889-3178</p>
+</div>
+<div class="order_img">
+	<img src="__PUBLIC__/images/order_notice2.gif"/>
+</div>
+<div class="order_content">
+	<div class="hotel_yuding_shang"></div>
+	<div class="inner_content">
+		<form action="__APP__/order/pay" method="post">
+			<input type="hidden" name="price_type" value="2"/>
+			<input type="hidden" name="name" value="{$ticket.tname}"/>
+			<input type="hidden" name="tid" value="{$ticket.tid}"/>
+	<div class="o_top">
+		<div class="t_title">
+			一、{$ticket.tname}
+		</div>
+		<div class="t_con">
+			<p>1、下订单需半小时后才能使用,如预定时间未到半小时,不享受优惠;</p>
+			<p>2、为保证取票、入园顺利，预订时请务必填写真实姓名、手机号码等信息;</p>
+		</div>
+	</div>
+	<div class="o_middle">
+		<div class="t_title">
+			二、预订信息
+		</div>
+		<div class="t_con t_next">
+			<ul>
+				<li>游玩时间：&nbsp;&nbsp;&nbsp;<span>
+						<input type="text" readonly="readonly" id="updatetime" name="updatetime"value="{|date:'Y-m-d'}" class="w150"/>
+						&nbsp;<span id="week1">
+					</li>
+					<foreach from="{$ticket_type}" value="{$v}" key="{$k}">
+					<div style="float:left;">
+					<input type="hidden" value="{$v.price}" name="price[]"/>
+					<input type="hidden" value="{$v.pid}" name="pid[]"/>
+				<li>{$v.pname}：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#FF6304;font-size:20px;">￥<span class="price">{$v.price}</span></span></li>
+				<li><span style="float:left;">门票数量：&nbsp;&nbsp;&nbsp;</span>
+					<span class="ding jian" >-</span><span style="display:none;">{$v.key}</span><span><input type="text" id="ding" name="num[]" value="{$v.val}"/></span><span class="ding jia">+</span><span style="display:none;">{$v.key}</span>
+				</li>
+			</div>
+		</foreach>
+			</ul>
+		</div>
+	</div>
+	<div class="o_nottom">
+		<div class="t_title">
+			三、取票人信息
+		</div>
+		<div class="t_con b_con">
+			<p>取票人：&nbsp;&nbsp;&nbsp;<input name="oname" type="text" id="uname"/></p>
+			<p>手机号码：<input name="telephone" type="text" id="tel"/><span style="margin-left:20px;width:280px;padding:10px;font-size:14px;color:red;">&nbsp;&nbsp;&nbsp;此手机号为接受短信所用，作为订购、查询、取票凭证，请准确填写。</span>
+            
+			</p>
+			<p>身份证：&nbsp;&nbsp;&nbsp;<input name="idnum" type="text" id="idnum"/>
+			<span style="margin-left:20px;width:350px;padding:10px;color:red;">&nbsp;&nbsp;&nbsp;景区订票需要提供。</span>
+		</p>
+			<p><img src="__PUBLIC__/images/menpiaoyuding01.gif"/>	</p>
+		</div>
+	</div>
+
+	</div>
+	<div class="hotel_yuding_xia"></div>
+</div>
+<div id="rel_bootom">
+		<div class="b_left">
+		<input type="hidden" name="total_price" id="total_p1" value="{$ticket_type[1]['price']}"/>
+			订票总价:<strong style="color:#FF6304;font-size:30px;">￥</strong><strong style="color:#FF6304;font-size:40px;" id="total_p">{$ticket_type[1]['price']}</strong>
+		</div>
+		<div class="b_right">
+			<input type="submit" value="" class="b_sub">
+		</div>
+</div>
+
+</form>
+<load file="__TPL__/Index/footer.html">
+<script>
+ $('#updatetime').calendar({format: 'yyyy-MM-dd'});
+ </script>

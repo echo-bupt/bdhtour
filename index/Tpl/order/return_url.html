@@ -1,0 +1,80 @@
+<?php
+
+require_once(ROOT_PATH."index/config/alipay.config.php");
+
+require_once(ROOT_PATH."index/lib/alipay_notify.class.php");
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta http-equiv="refresh" content="3;url=<?php echo $cfg_basehost;?>/users"> 
+
+<?php
+
+//计算得出通知验证结果
+
+$alipayNotify = new AlipayNotify($aliapy_config);
+
+$verify_result = $alipayNotify->verifyReturn();
+
+if($verify_result) {
+	//验证成功.
+echo 22;
+exit();
+    $out_trade_no	= $_GET['out_trade_no'];	//获取订单号
+
+    $trade_no		= $_GET['trade_no'];		//获取支付宝交易号
+
+    $total_fee		= $_GET['total_fee'];		//获取总价格
+
+//未来处理代码
+    if($_GET['trade_status'] == 'TRADE_FINISHED' || $_GET['trade_status'] == 'TRADE_SUCCESS') {
+
+    }
+
+    else {
+
+    }
+
+	echo "恭喜您，支付成功<br />";
+
+	echo "本站订单号：".$out_trade_no."<br />";
+
+	echo "支付宝交易号：".$trade_no."<br />";
+
+	echo "<a href=__ROOT__>点此返回首页</a>，3秒后将自动调转到网站主页";
+
+}
+
+else {
+
+    //验证失败
+
+    //如要调试，请看alipay_notify.php页面的verifyReturn函数，比对sign和mysign的值是否相等，或者检查$responseTxt有没有返回true
+    echo 3333;
+
+    echo "验证失败,3秒后将自动调转到会员主页";
+
+}
+
+?>
+
+        <title>支付宝即时到帐接口</title>
+
+	</head>
+
+    <body>
+
+    </body>
+
+<script>
+	// setTimeout(window.location.href='__ROOT__',3000); 
+</script>
+</html>

@@ -1,0 +1,33 @@
+#position{
+	float: left;
+	width: 980px;
+	height:40px;
+	border-bottom: solid 2px #3A83E6; 
+	margin-bottom: 15px;
+}
+#position p{line-height: 30px;}
+#position .pos1{float:left;font-size: 14px;}
+#position .pos2{float: right;font-size: 18px;font-weight: bold;color:#FC8958}
+
+#pay-info{height:260px;width: 980px;border: solid 1px #ddd;clear: both;}
+#pay-info .tops{background: #F0FAE2 repeat;height:60px;width: 100%;}
+#pay-info .tops p{margin:0px 0px 10px 20px;font-size: 18px;color:#6D9A0C;text-align: left;font-weight: bold;line-height: 60px;}
+#pay-info .pay-div{float: left;width:45%;height:100px;}
+#pay-info .pay{height:150px;width: 100%;}
+#pay-info .pay-div ul li{list-style: none;margin-top: 25px;font-size: 16px;}
+.goPay{margin-left: 15px;margin-top: 10px;font-size: 18px;}
+#relpay{margin-top: 15px;height:600px;width: 100%;border: solid 1px #ddd;}
+#relpay .tops{background: #FFF5DA repeat;height:60px;width: 100%;}
+#relpay .tops p{margin:0px 0px 10px 20px;font-size: 18px;color:#AA7C4E;text-align: left;font-weight: bold;line-height: 60px;}
+.goPays p{margin:25px 0px 20px 15px;font-size: 18px;color:#57310E;}
+.zhifu{margin: 40px 0px 10px 40px;}
+.goPays{width: 100%;height: 180px;border-bottom: solid 1px #FADFBD}
+.zhifu_top{margin:30px 0px 20px 25px;width: 100%;height:50px;}
+.zhifu_bottom{margin-left: 35px;width: 100%;height:130px;font-size: 16px;}
+.zhifu_piao{float: right;}
+.zhifu_bottom p{color:#6C3B0D;font-size: 18px;font-weight: bold;}
+.zhifu_bottom li{list-style: none;margin-top: 10px;font-size: 16px;}
+.zhifu_piao{height:50px;width:100%;}
+.zhifu_piao span{float: right;height:50px;margin-right: 25px;}
+.bgs{width:22px;height: 24px;display: inline-block;background: url("../images/tel.png") no-repeat;}
+#relpay .zhifu_top .subs{width:148px;height:46px;background: url("../images/fukuan.png");padding:0px;}

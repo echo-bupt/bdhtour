@@ -1,0 +1,20 @@
+        <foreach from="$hotelData" value="$v">
+        <div class="one-fourth travel">
+          <div class="post-item">
+            <div class="image-place">
+              <a href="__APP__/index/detail?hid={$v.hid}"><img src="__ROOT__/{$v.img}" alt="image" width="220px;" height="135px;"/>  
+              </a>          
+              </div>
+            <div class="post-content">
+               <a href="__APP__/index/detail?hid={$v.hid}"><h2 class="post-title">{$v.hname}</h2></a>
+              <!--<p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus vehicula dui.</p> -->
+            </div>
+            <div class="post-meta">
+              <span class="comment-count" style="font-size:15px;">特价:￥{$v.tprice}</span>
+              <a class="read-more" href="__APP__/index/detail?hid={$v.hid}">查看</a>           
+            </div>
+          </div>
+        </div>
+        </foreach>
+        
+       

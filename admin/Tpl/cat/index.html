@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/public.js"></script>
+<body>
+<div id="content" style="text-align:center;">
+	<table id="table" class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th width="15%">类别名称</th>
+				<th width="10%">添加时间</th>
+				<th >操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach from="$catData" value="$v">
+				<tr>
+					<td>{$v.cname}</td>
+					<td>{$v.time}</td>
+					<td>
+						<a class='btn btn-small' href="__APP__/cat/edit?cid={$v.cid}">编辑</a>
+						<a class='btn btn-small del' href="__APP__/cat/delete?cid={$v.cid}">删除</a>
+					</td>
+				</tr>
+			</foreach>
+		</tbody>
+	</table>
+	
+	<div id="page">
+		{$page}		
+	</div>
+</div>
+</body>
+</html>

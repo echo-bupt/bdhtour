@@ -1,0 +1,80 @@
+<load file="__TPL__/index/header.html">
+<link rel="stylesheet" href="__PUBLIC__/css/res.css" />
+<div id="position">
+	<p class="pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;<a href="__APP__/index/more?type=2">景区门票</a>&nbsp;&nbsp;>支付成功</p>
+	<p class="pos2">电话预定 : 400-889-3178</p>
+</div>
+<div class="order_img">
+	<img src="__PUBLIC__/images/order_sec2.gif"/>
+</div>
+<div class="order_content">
+	<div class="hotel_yuding_shang"></div>
+	<div class="inner_content">
+			<div class="order_info">
+				
+				<p>
+					<span style="line-height:35px;">&nbsp;&nbsp;您预订的<strong class="bold_ok">
+						{$ticket.name}
+					</strong>
+					正在出票中，请等待出票结果。
+				</span>
+				</p>
+				<div><span>如长时间未收到信息，请致电18303359123&nbsp;&nbsp;如出票失败，我们会立即退款到您的付款账号</span>
+				</div>
+			</div>
+			<div id="order_info_hengxian"></div>
+			<div class="order_xiang">
+				<div class="order_left">
+					<p id="topl">预订详情</p>
+					<p>{$ticket.name}</p>
+					<p>订单号：{$ticket.order_num}</p>
+					<p>预订日期：{$ticket.order_time}</p>
+					<p>购买数量：{$ticket.num}</p>
+					<p>门票有效日期：{$ticket.valid}</p>
+					<p>本单共计：<strong style="font-size:20px;color:#FF5321;font-weight:bold;">{$ticket.price_total}</strong>元</p>
+				</div>
+				<div class="order_right">
+					<p id="topl">取票人信息</p>
+					<p>联系人：{$ticket.oname}</p>
+					<p>手机号码：{$ticket.telephone}</p>
+				</div>
+			</div>
+			<div id="order_info_hengxian"></div>
+			<div class="tui">
+				<p class="top1">
+					退订说明
+				</p>
+				<p>
+					退票规则：不支持全额退款,退票手续费5元/张
+				</p>
+			</div>
+	</div>
+	<div class="hotel_yuding_xia"></div>
+</div>
+<div id="fujin">
+	<div>
+		<p class="left1">附近酒店推荐</p>
+		<a href="__ROOT__"><p class="right1">返回首页</p></a>
+	</div>
+	<div class="jingdian_listss" style="clear:both;">
+		<foreach from="{$ticketData}" value="{$v}">
+         <div class="one-fourth travel">
+          <div class="post-item">
+            <div class="image-place">
+              <a href="__APP__/index/detail?hid={$v.hid}"><img src="__ROOT__/{$v.img}" alt="image" width="220px;" height="135px;"/>  
+              </a>          
+              </div>
+            <div class="post-content">
+               <a href="__APP__/index/detail?hid={$v.hid}"><h2 class="post-title">{$v.hname}</h2></a>
+              <!--<p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus vehicula dui.</p> -->
+            </div>
+            <div class="post-meta">
+              <span class="comment-count" style="font-size:15px;">特价:￥{$v.tprice}</span>
+              <a class="read-more" href="__APP__/index/detail?hid={$v.hid}">查看</a>           
+            </div>
+          </div>
+        </div>
+    </foreach>
+	</div>
+</div>
+<load file="__TPL__/index/footer.html">

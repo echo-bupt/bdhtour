@@ -1,0 +1,72 @@
+/*二级页面次导航*/
+#position{
+  float: left;
+  width: 980px;
+  height:40px;
+  border-bottom: solid 2px #3A83E6; 
+  margin-bottom: 15px;
+}
+#position p{line-height: 30px;}
+#position .pos1{float:left;font-size: 14px;}
+#position .pos2{float:right;font-size: 18px;font-weight: bold;color:#FC8958}
+
+/*预订页面最外div*/
+.order_content{
+    float: left;
+    width:980px;
+    background: url("../images/hotel_yuding_zhongbj.gif");
+        margin-top: 5px;
+}
+.hotel_yuding_shang{
+    float: left;
+    width:980px;
+    height: 14px;
+    background: url("../images/hotel_yuding_shang.gif");
+}
+.hotel_yuding_xia{
+    float: left;
+    width:980px;
+    height: 14px;
+    background: url("../images/hotel_yuding_xia.gif");
+}
+#serach_xia{
+  float: left;
+  width: 980px;
+  height: 10px;
+}
+   #cons{
+    float: left;
+    margin-top: 20px;
+    width: 940px;
+    margin-left: 20px;
+    }
+    #cons p{
+    	margin-top: 25px;
+    }
+    .top{
+    	line-height: 40px;
+    	height:35px;
+    	background: #F8F9FB;
+    }
+    .top span{
+    	font-weight: bold;
+    	color:#515352;
+      padding-left: 10px;
+    }
+      .mid_h{
+      	height:120px;
+      }
+      .mid_h img{
+
+        margin-top: 10px;
+      }
+     .mid_h ul{
+     	margin:0;
+      font-size: 14px;
+     }
+    .mid_h li{
+    	list-style: none;
+    	margin-left: 20px;
+    	float: left;
+    	width:150px;height:120px;
+    }

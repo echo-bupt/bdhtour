@@ -1,0 +1,76 @@
+<load file="__TPL__/index/header.html">
+	<link rel="stylesheet" href="__PUBLIC__/css/order.css" />
+<div id="position">
+	<p class="pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;<a href="__APP__/index/more?type=1&htype=1">景点门票</a>&nbsp;>&nbsp;订单支付</p>
+	<p class="pos2">电话预定 : 400-889-3178</p>
+</div>
+<div id="pay-info">
+	<div class="tops">
+		<p><span>订单信息</span></p>
+	</div>
+	<form action="__APP__/order/getAply" method="post">
+	<div class="pay">
+	<div class="pay-div">
+		<ul>
+			<li>
+				<input type="hidden" value="2" name="price_type"/>
+			    <p><input type="hidden" value="{$data.order_num}" name="order_num"/>订单号:{$data.order_num}</p>
+			</li>
+			<li>
+				<input type="hidden" value="{$data.name}" name="name"/>
+			    <p>景点:{$data.name}</p>
+			</li>
+			<li>
+			    <p>客人姓名:{$data.oname}</p>
+			</li>
+		</ul>
+	</div>
+	<div class="pay-div">
+		<ul>
+			<li>
+			    <p>有效日期:{$data.valid}</p>
+			</li>
+			<li>
+			    <p>购买数量:{$data.num}</p>
+			</li>
+			<li>
+			    <p>手机号:{$data.telephone}</p>
+			</li>
+		</ul>
+	</div>
+</div>
+	<div class="goPay">
+		<input type="hidden" value="{$data.price_total}" name="price_total"/>
+		<p>&nbsp;&nbsp;&nbsp;应付金额:<span style="color:#FE6410;font-size:23px;font-weight:bold;">￥ {$data.price_total}</span></p>
+	</div>
+</div>
+<div id="relpay">
+		<div class="tops">
+			<p><span>在线支付</span></p>
+		</div>
+		<div class="goPays">
+			<p>支付宝支持信用卡和储蓄卡在线支付</p>
+			<div class="zhifu">
+				<input type="radio" checked="true" style="margin-right:15px;"/>
+				<img src="__PUBLIC__/images/alipay.gif"/>
+			</div>
+		</div>
+		<div class="zhifule">
+			<div class="zhifu_top">
+				<input type="submit" class="subs" value=""/>
+			</div>
+			</from>
+			<div class="zhifu_bottom">
+				<p>温馨提示</p>
+				<ul>
+					<li>如果您的浏览器没有打开，请设置您的浏览器为允许弹出</li>
+					<li>如果您多次点击产生多个支付页面，请在一个页面完成支付，其他页面请直接关闭。</li>
+					<li>如果您的银行卡或账户已被扣款，但支付没有成功，这可能是网络传输问题造成，不必担心，请过几分钟在查看或致电我们。</li>
+				</ul>
+			</div>
+			<div class="zhifu_piao">
+				<span style="color:#FF6E1A;font-size:25px;font-weight:bold;">400-889-3178</span><span>客服电话:</span><span class="bgs"></span>
+			</div>
+		</div>
+</div>
+<load file="__TPL__/index/footer.html">

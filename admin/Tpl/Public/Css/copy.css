@@ -1,0 +1,40 @@
+#content .top{
+	background: #EEF2FB none repeat;
+	margin: 10px auto;
+	width:60%;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+#content .top p{
+	margin: 10px auto;
+	font-family: '微软雅黑';
+	font-size: 20px;
+	font-weight: bold;
+	color:black;
+}
+#content .mid{
+	background: #EEF2FB none repeat;
+	margin: 10px auto;
+	width:60%;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+#content .mid li{
+	width:100%;
+	height:48px;
+	display: block;
+	clear: both;
+	margin-top: 15px;
+}
+#content .mid li .next{
+	text-decoration:underline;
+}
+
+#content .mid .pre{
+	margin-left: 10px;
+	float:left;
+}
+#content .mid .next{
+	margin-right: 10px;
+	float:right;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/hotel_edit.js"></script>
+<body>
+<div id="content">
+	<form id="goodsForm" action="" method="post">
+	<table class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th width="20%">名称</th>
+				<th>值</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>酒店名称</td>
+				<td>
+					<input type="text" name="hname" value="{$hotel.hname}"/>
+					<input type='hidden' name='type' value="{$type}">
+					<input type="hidden" name='hid' value="{$hotel.hid}">
+				</td>
+			</tr>
+			<tr>
+				<td>酒店特价</td>
+				<td>
+					<input type="text" name='tprice' value="{$hotel.tprice}"/>
+					<span style="margin-left:50px;margin-right:10px;">是否特惠:</span> 特惠住宿<input type="radio" name="is_hui" value="1" style="margin-left:5px;"/>
+					(*不是特惠不要勾选)
+				</td>
+			</tr>
+			<tr>
+				<td>酒店前台展示图</td>
+				<td>
+					<foreach from="{$indexImg}" value="$v">
+						<img src="__ROOT__/{$v.img}" style="float:left;width:120px;height:100px;" />
+					</foreach>
+					<div style="clear:both;">
+					<upload size="2" type="jpg,png,gif" limit="2" name="index_img" dir="upload/hotel" thumb="220,135" waterbtn='false' />
+				</div>
+				</td>
+			</tr>
+			<tr>
+				<td>所在地区</td>
+				<td>
+					<select name="aid" style='width:150px;height:30px;'>
+						<foreach from="$allLocality" value="$v">
+							<option value="{$v.aid}" <?php if($v['aid']==$hotel['aid']){?>selected="selected"<?php }?>>{$v.aname}</option>	
+						</foreach>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>详细地址</td>
+				<td>
+					<input type="text" name="rel_ad" style="width:90%;height:40px;" value="{$hotel.rel_ad}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>房间类型</td>
+				<td>
+					<div id="addDiv">
+						<input type="hidden" value="{$roomBtn}" id="roomBtn"/>
+						<foreach from="{$allRoomData}" value="$v1" key="{$k}">
+						<div id="room{$k}" style="margin-top:30px;">
+					<select name="cid[]" style='width:150px;height:30px;'>
+						<foreach from="$allCatData" value="$v2">
+							<option value="{$v2.cid}" <?php if($v2['cid']==$v1['cid']){?>selected="selected"<?php }?>>{$v2.cname}</option>	
+						</foreach>
+					</select><span>市场价:</span><input type="text" name="price_shi[]" value="{$v1.price_shi}"/><span>平日价:</span><input type="text" name="price_ping[]" value="{$v1.price_ping}"/><span>周末价:</span><input type="text" name="price_mo[]" value="{$v1.price_mo}"/><span>房间设施:</span><input type="text" name="device[]" value="{$v1.device}"/>
+					<input type="button" id="addBtn{$k}" value="添加" class="btn" style="width:100px;height:50px;"/>
+				       </div>
+				       	</foreach>
+				       	<div id="room" style="display:none;margin-top:30px;">
+					<select name="cid[]" style='width:150px;height:30px;'>
+						<foreach from="$allCatData" value="$v">
+							<option value="{$v.cid}">{$v.cname}</option>	
+						</foreach>
+					</select><span>市场价:</span><input type="text" name="price_shi[]"/><span>平日价:</span><input type="text" name="price_ping[]"/><span>周末价:</span><input type="text" name="price_mo[]"/><span>房间设施:</span><input type="text" name="device[]"/>
+					<input type="button"  value="添加" id="rBtn"class="btn" style="width:100px;height:50px;"/>
+				        </div>
+				        <p>	
+				        	<span style="color:red;">*注意:</span>(如果删除某个房间类型，将该房间类型对应的任意一个价格填为0即可)
+				        </p>
+				    </div>
+				</td>
+			</tr>
+			</tr>
+				<td>发布时间</td>
+				<td>
+					<input id="end_time" type="text" name="time" value="{$hotel.time}"/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td style="width:20%;">酒店介绍</td>
+				<td>
+					<ueditor name='detail' content="{$hotel.des}"/>
+				</td>
+			</tr>	
+			<tr>
+				<td>酒店详情展示图</td>
+				<td>
+				<foreach from="{$detailImg}" value="$v">
+						<img src="__ROOT__/{$v.img}" style="float:left;width:120px;height:100px;" />
+					</foreach>
+					<div style="clear:both;">
+					<upload size="2" type="jpg,png,gif" limit="15" name="img" thumb="500,320" waterbtn='false' dir="upload/hotel"/>
+				</div>
+				</td>
+			</tr>	
+	
+			<tr>
+				<td><input type="submit" class='btn' value='确定上传' style='width:200px;height:50px'/></td>
+				<td><input type="reset" class='btn' value='重新填写' style='width:200px;height:50px'/></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+	
+	
+	
+</div>
+</body>
+</html>

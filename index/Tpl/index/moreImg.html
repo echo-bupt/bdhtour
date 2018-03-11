@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<meta charset="utf-8">
+<title>北戴河宾馆_北戴河酒店_北戴河住宿-北戴河旅游网</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<style>
+	body{margin:0px auto;}
+	#imgs{
+float: left;
+		width:980px;clear: both;margin:20px auto;}
+	#imgs ul{margin: 0px;}
+	#imgs ul li{
+		float:left;	
+		margin:5px auto;
+		list-style: none;
+		padding-right: 5px;
+		width: 460px;
+		text-align: center;
+
+	}
+	</style>
+	<body>
+	<div id="imgs">
+		<ul>
+			<foreach from="{$moreImg}" value="{$v}" >
+			<li><img src="__ROOT__/{$v.img}" width="450px">
+				<span style="display:block;margin-top:15px;">{$v.alt}</span>
+			</li>
+		</foreach>
+		</ul>
+	</div>
+</body>

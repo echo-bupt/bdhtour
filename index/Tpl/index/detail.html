@@ -1,0 +1,62 @@
+<load file="__TPL__/index/header.html">
+<script type="text/javascript" src="__PUBLIC__/js/detail.js"></script>
+<!-- <link rel="stylesheet" href="__PUBLIC__/css/reset.css" /> -->
+<link rel="stylesheet" href="__PUBLIC__/css/detail.css" />
+<div id="position">
+	<p class="pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;<a href="__APP__/index/more?type=1&htype=1">宾馆酒店</a>&nbsp;>&nbsp;酒店详细内容</p>
+	<p class="pos2">电话预定 : 400-889-3178</p>
+</div>
+<div id="imgs">
+	<div class="img_l">
+		<div class="img_big">
+			<img src="__ROOT__/{$yuanimg.img}" width="505px" height="360px" id="big"/>
+		</div>
+		<div class="img_list">
+			<ul  style="position:relative">
+				<foreach from="{$detailImgs}" value="{$v}">
+				<li><img src="__ROOT__/{$v.img}" width="165px" height="120px;"></li>
+			</foreach>
+			<span style="position:absolute;z-index:100;padding-left:15px;width:80px;line-height:25px;height:25px;right:5px;;bottom:4px;background:#645C67;"><a href="__APP__/index/moreImg/hid/{$hotel.hid}" style="color:#fff;" target="_blank">查看更多</a></span>
+			</ul>
+	
+		</div>
+	</div>
+	<div class="img_r">
+		<div class="img_r_top">
+			<p><strong>{$hotel.hname}</strong></p>
+			<p><span>地址：{$hotel.rel_ad}</span></p>
+			<div class="des">
+				{$hotel.des}
+			</div>
+		</div>
+		<div class="img_r_bottom">
+		<img src="__PUBLIC__/images/hotel_baozhang.jpg"/>	
+		</div>
+
+	</div>
+</div>
+<div id="price">
+	<table class="pri" cellspacing="1" cellpadding="0" border="0">
+		<tr class="bg">
+			<th width="12%">房间类型</th>
+			<th width="45%">房间设施简介</th>
+			<th width="7%">门市价</th>
+			<th width="7%">平日价</th>
+			<th width="7%">周末价</th>
+			<th width="7%"></th>
+		</tr>
+		<foreach from="$rooms" value="{$v}">
+		<tr>
+			<td>{$v.cname}</td>
+			<td>{$v.device}</td>
+			<td class="price_menshi">￥{$v.price_shi}</td>
+			<td class="price_pingri">￥{$v.price_ping}</td>
+			<td class="price_zhoumo">￥{$v.price_mo}</td>
+			<td><a href="__APP__/order/write?hid={$hotel.hid}&cid={$v.cid}">
+				<img src="__PUBLIC__/images/yuding.gif"/>
+			</td>
+		</tr>
+	</foreach>
+	</table>
+</div>
+<load file="footer.html">

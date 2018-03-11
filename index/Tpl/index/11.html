@@ -1,0 +1,48 @@
+<load file="__TPL__/Index/header.html">
+
+<!-- <link rel="stylesheet" href="__PUBLIC__/css/reset.css" /> -->
+
+<link rel="stylesheet" href="__PUBLIC__/css/detail.css" />
+
+<div id="position">
+
+	<p class="pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;文章内容</p>
+
+	<p class="pos2">电话预定 : 400-889-3178</p>
+
+</div>
+<!-- 联系主体 -->
+<div id="lianxi_zong">
+	
+		<div class="lianxi_zong_zuo">
+			<p>热点文章</p>
+				<ul class="wenzhangbiaoti">
+					<foreach from="$orther" value="$v">
+					<li><a href="__APP__/index/artail/?aid={$v.aid}">{$v.title}</a>
+					</li>
+				   </foreach>
+				</ul>
+
+
+
+		</div>
+
+		<div class="lianxi_zong_you">
+	<p class="lianxi_zong_you_bt">{$data.title}</p>
+		<div class="con">
+			{$data.con}
+		</div>
+		</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<load file="__TPL__/Index/footer.html">

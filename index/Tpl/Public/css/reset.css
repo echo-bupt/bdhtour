@@ -1,0 +1,23 @@
+@charset"UTF-8";
+
+/* 全局CSS定义 */
+
+body{margin:0 auto;padding:0;background:#FFF;font-size:12px;color:#333;}
+
+body > div{margin-right:auto;margin-left:auto;} 
+
+div,form,ul,ol,li,span,p{margin:0;padding:0;border:0;}
+
+img,a img{border:0;margin:0;padding:0;}
+
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+
+ul,ol,li{list-style:none}
+
+table,td,input{font-size:12px;padding:0}
+
+/* 默认链接颜色 */
+
+a{outline-style:none;color:#333;text-decoration:none}
+
+a:hover{color:#c00;text-decoration:underline;}

@@ -1,0 +1,16 @@
+<div class="jingdian_list" style="clear:both;">
+          <ul>
+            <foreach from="$ticketData" value="$v">
+            <li>
+          <a href="__APP__/Ticket/detail?tid={$v.tid}">
+            <img width="224" height="135" alt="" src="__ROOT__/{$v.img}"/>
+          </a>
+        <p class="mp_biaoti"><a href="__APP__/Ticket/detail?tid={$v.tid}">{$v.tname}</a></p><br>
+        
+        <div style="clear:both;">
+      <span style="font-family:微软雅黑;font-size:14px;color:#FF6633;display:table-cell;vertical-align:bottom;height:25px;padding-bottom:5px;">&nbsp;&nbsp;￥</span><span style="font-family:微软雅黑;font-size:25px;color:#FF6633;display:table-cell;vertical-align:bottom;height:25px;padding-bottom:8px;">{$v.tprice}</span><span style="font-family:微软雅黑;font-size:14px;color:#A5A5A5;display:table-cell;vertical-align:bottom;height:25px;padding-bottom:5px;">起</span><span style="font-family:微软雅黑;font-size:14px;color:#A5A5A5;display:table-cell;vertical-align:bottom;height:25px;padding-bottom:5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满意度{$v.man}</span>
+      </div>
+        </li>
+      </foreach>
+          </ul>
+         </div>

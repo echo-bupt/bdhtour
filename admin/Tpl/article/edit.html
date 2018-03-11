@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link href="__PUBLIC__/css/public.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.2.min.js"></script>
+<body>
+<div id="content">
+	<form id="goodsForm" action="" method="post">
+	<table class='table table-striped table-bordered'>
+		<thead>
+			<tr>
+				<th style="width:10%">名称</th>
+				<th>值</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>文章名称</td>
+				<td>
+					<input type="hidden" name="aid" value="{$data.aid}"/>
+					<input type="text" name="cname" value="{$data.title}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>上传时间</td>
+				<td>
+					<input typr="text"name="time" value="{$data.time}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>文章内容</td>
+				<td>
+					<ueditor name='con' content="{$data.con}"/>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" class='btn' value='确定修改' style='width:100px;height:30px'/></td>
+				<td><input type="reset" class='btn' value='重新填写' style='width:100px;height:30px'/></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+	
+	
+	
+</div>
+</body>
+</html>

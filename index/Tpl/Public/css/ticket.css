@@ -1,0 +1,352 @@
+/*二级页面次导航*/
+#menpiao_position{
+	float: left;
+	width: 980px;
+	height:40px;
+	border-bottom: solid 2px #3A83E6; 
+	margin-bottom: 15px;
+}
+#menpiao_position p{line-height: 30px;}
+#menpiao_position .menpiao_pos1{float:left;font-size: 14px;}
+#menpiao_position .menpiao_pos2{float:right;font-size: 18px;font-weight: bold;color:#FC8958}
+
+/*图片价格*/
+#ticket_tupian_jiage{
+	float: left;
+	width: 980px;
+	margin: 0px auto;
+}
+#img_zuo{
+	float: left;
+	width: 510px;
+}
+.img_zuo_xiao {
+	float: left;
+	margin-top: 5px;
+	width: 510px;
+}
+.img_zuo_xiao ul{
+	float: left;
+	width: 510px;
+}
+.img_zuo_xiao li{
+	float: left;
+padding-right: 5px;
+}
+
+#jiage_you{
+	float: right;
+	width: 470px;
+}
+
+.ticket_info {
+	float: left;
+	margin-top: 10px ;
+	margin-left: 20px;
+}
+.ticket_info strong{
+	float: left;
+    font-weight: bold;
+    font-size: 25px;
+}
+.menpiao_biaoti{
+    float: left;
+    font-family:微软雅黑;
+    font-size:14px;
+    color:#FF6633;
+
+}
+.ticket_info_kuan{
+	float: left;
+	margin-top: 60px;
+}
+.add{
+	font-family:微软雅黑;
+	font-size:15px;
+	color:#2F2F2F;
+	font-weight: bold;
+	display:table-cell;
+	vertical-align:bottom;
+	height:25px;
+}
+.add2{
+	font-family:微软雅黑;font-size:15px;color:#7F7F7F;display:table-cell;vertical-align:bottom;height:25px;
+}
+.add img{
+	float: right;
+	margin: 0px auto;
+}
+.myd{
+	float: left;
+	font-family:微软雅黑;
+	font-size:25px;
+	color:#FF6600;
+	font-weight: bold;
+	display:table-cell;
+	vertical-align:bottom;
+	padding-top: 55px;
+}
+.myd2{
+	font-family:微软雅黑;
+	font-size:15px;
+	color:#7F7F7F;
+	display:table-cell;
+	padding-left:10px;
+	padding-top:56px;
+}
+.ticket_jiage{
+	float: left;
+
+}
+.jiage_big{
+	float: left;
+	font-family:微软雅黑;
+	font-size:45px;
+	color:#FF6600;
+	font-weight: bold;
+	display:table-cell;
+	vertical-align:bottom;
+	padding-left:10px;
+	padding-top: 56px;
+}
+
+.myd3{
+	font-family:微软雅黑;
+	font-size:15px;
+	color:#7F7F7F;
+	display:table-cell;
+	padding-left:10px;
+	padding-top:65px;
+}
+
+.jiage_img{
+    padding-left: 62px;
+	display:table-cell;
+	text-decoration:line-through;
+}
+/*图片价格结束*/
+/*门票介绍*/
+#ticket_info{
+	float: left;
+	width: 980px;
+	margin: 0px auto;
+}
+#ticket_info_text{
+	float: left;
+	width: 980px;
+	margin: 20px auto;
+	border: 1px solid;
+	border-top-color:#CCCCCC;
+	border-left-color:#1BA9B9;
+	border-right-color:#1BA9B9;
+	border-bottom-color:#1BA9B9;
+}
+#ticket_info_text span{
+	float: left;
+	padding: 0px 10px 10px 10px;
+	line-height: 25px;
+	font-size: 14px;
+    color: #535353;
+    text-indent:2em;
+  
+   }
+#ticket_info_yudingxuzhi{
+	float: left;
+	width: 980px;
+	margin: 20px auto;
+	border: 1px solid #DDDDDD;
+	background: url("../images/menpiao_yudingxuzhi_bj.gif");
+	
+}
+.ticket_xuzhi{
+	padding-bottom: 20px;
+}
+
+.xuzhi_biaoti {
+	width: 110px;
+	text-align: center;
+    padding-left: 3px;
+    padding-top: 22px;
+    display:table-cell;
+    vertical-align: top;
+    font-size: 14px;
+    color: #535353;
+}
+.xuzhi_neirong{
+	width: 800px;
+	padding-left: 15px;
+	line-height: 25px;
+	padding-top: 20px;
+	font-size: 14px;
+	color: #535353;
+}
+/*预订状态图片*/
+.order_img{
+float: left;
+width:980px;
+height:40px;
+}
+
+/*预订页面最外div*/
+.order_content{
+	float: left;
+	width:980px;
+	background: url("../images/hotel_yuding_zhongbj.gif");
+}
+.hotel_yuding_shang{
+	float: left;
+	width:980px;
+	height: 14px;
+	background: url("../images/hotel_yuding_shang.gif");
+}
+.hotel_yuding_xia{
+	float: left;
+	width:980px;
+	height: 14px;
+	background: url("../images/hotel_yuding_xia.gif");
+}
+
+
+
+
+
+#top_all{
+	float: left;
+width: 980px;
+
+}
+/*
+#top_all{
+	border:solid 1px #F8BA29;border-bottom:solid 1px #ddd;border-left:none;clear:both;height:260px;overflow:hidden;width:980;padding-top:20px;padding-left: 15px;}
+*/
+#top_all .rights{
+	float: left;
+	width: 980px;
+	height: 261px;
+	background: url("../images/renqibang_bj.gif");
+	margin-bottom: 20px;
+}
+
+
+
+/*人气榜*/
+
+.jingdian_list{
+	float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#top_bottom .jingdian_list ul{
+	margin-left: 10px;
+}
+
+#top_bottom .jingdian_list ul li{
+	margin-right: 10px;
+}
+
+
+#top_bottom{
+	width: 980px;
+	height:502px;
+	overflow: hidden;
+	border: solid 1px #98D347;
+	margin-top: 20px;
+
+}
+
+
+/*每个景点里面格式*/
+.mp_biaoti a{
+  float: left;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-family: 微软雅黑;
+  font-size: 16px;
+   color: #666666;
+   text-decoration:none;  
+
+}
+.mp_biaoti a:hover{color: red;}
+/*每个景点里面格式结束*/
+.bottom_left{
+	width:760px;
+	height:580px;
+	float: left;
+	overflow: hidden;
+}
+#top_bottom li{
+	margin-right: 0px;
+}
+#top_bottom .bottom_right{
+	position: relative;
+	float: right;
+	margin-left: 5px;
+	width: 210px;
+	height:550px;
+}
+#top_bottom .top2{
+	position: absolute;
+	width: 200px;
+	height:300px;
+	top:150px;
+	left:0px;
+	border: solid 1px red;
+}
+.top2 ul{
+	margin: 0;
+}
+#top_bottom .top2 ul li{
+	border: solid 1px black;
+	list-style: none;
+	width: 100px;
+	height:50px;
+}
+#imgs{width: 980px;height:580px;border:solid 1px #ddd;margin:10px auto;}
+#imgs .img_list{height:150px;width:570px;}
+#imgs .img_list ul{margin:0;}
+#imgs .img_list li{float:left;margin-right:5px;list-style: none;margin-top: 10px; height:100%;}
+#imgs .img_l{width:570px;height:auto;float: left;}
+#imgs .img_big{height: 400px;width:100%;}
+#imgs .img_r{float: left;width:300px;}
+.img_r_top{margin:10px 0px 10px 15px;padding: 5px;width: 100%;height:400px;font-size: 16px;}
+.img_r_top strong{font-weight: bold;font-size: 19px;letter-spacing: 5px;}
+.img_r_top span{font-size: 15px;color:#9E9E9E;}
+.img_r_top p{margin-top: 30px;margin-left: 20px;}
+.des{margin-top: 30px;}
+.zhang{float: right;margin-right: 10px;margin-top: 15px;}
+.manyi{margin-top: 60px;padding-left: 10px;}
+.manyi span{font-size: 26px;font-weight: bold;color:#FD6907;}
+.img_r_bottom{height:100px;margin-top: 15px;}
+.img-left{float: left;height:50px;}
+.img-left strong{font-size: 40px;font-weight: bold;color:#FD6907;margin-left: 25px;}
+.img-right{float:right;margin-right: 60px;}
+.img-right p{width: 129px;height:41px;background: url("../images/yuding.png");}
+
+.inner_content{width:950px;}
+.o_top{height:200px;margin-left: 50px;width:900px;}
+.t_title{line-height: 30px;padding: 20px 0px 10px;border-bottom: solid 2px #2B97D5;font-size: 18px;font-weight: bold;}
+.t_con{margin-left: 50px;padding-top:10px;margin-top: 5px;width: 800px;height:100px;}
+.t_con p{margin-top: 20px;font-size: 14px;}
+.o_middle{height:300px;margin-left: 50px;width:900px;}
+.t_next{height:210px;}
+.t_next span{text-align: center;}
+.t_next ul{margin:0px;font-size: 14px;}
+.t_next ul li{list-style: none;margin-top: 25px;}
+
+
+
+.ding{border:solid 1px #ddd;width:40px;height:20px;display: inline-block;float: left;text-align: center;}
+#ding{float: left;width:40px;height:20px;border-radius: 0px;padding: 0px;text-align: center;}
+.o_nottom{height:320px;margin-left: 50px;width:900px;clear: both;}
+.b_con{height:180px;}
+#rel_bootom{height:100px;margin-left: 50px;}
+.b_left{float: left;height:90px;width:400px;font-size: 25px;margin-left: 50px;margin-top: 30px;letter-spacing:5px;line-height: 40px;font-family:微软雅黑;}
+.b_right{float: right;height:90px;width:400px;margin-right: 50px;margin-top: 30px;}
+#rel_bootom .b_sub{width: 145px;height: 45px;background: url("../images/pay.gif");padding: 0px;border: 0px;}
+#content{width:980px;}
+.topImg{height:60px;line-height: 60px;}
+#content .con{height:160px;border:solid 2px #ddd;background: #F2F2F2;}
+.con2 table{width: 100%;height:auto;border: solid 1px #ddd;}
+
+

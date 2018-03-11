@@ -1,0 +1,71 @@
+<load file="__TPL__/index/header.html">
+<link rel="stylesheet" href="__PUBLIC__/css/serach.css" />
+<cal/>
+<div id="position">
+	<p class="pos1">您所在的位置: <a href="__ROOT__">首页</a>&nbsp;>&nbsp;订单查询&nbsp;&nbsp;>查询结果</p>
+	<p class="pos2">电话预定 : 400-889-3178</p>
+</div>
+<div class="order_content">
+	<div class="hotel_yuding_shang"></div>
+	<foreach from="{$hotel}" value="{$v}">
+	  <div id="cons">
+		<div class="top">
+			<span>酒店</span> &nbsp;&nbsp;&nbsp;{$v.order_num}&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;{$v.order_time}
+		</div>
+		<div class="mid_h">
+			<ul>
+				<li><img src="__ROOT__/{$v.img}" width="150px;height:134px;"></li>
+				<li>
+					<p>入住时间:{$v.begin}</p>
+					<p>离开时间:{$v.end}</p>
+				</li>
+				<li>
+					<p>￥{$v.price}</p>
+					<p>数量:{$v.onum}间</p>
+					<p>共:{$v.days}晚</p>
+				</li>
+				<li>
+					<p>总计:</p>
+					<p>￥{$v.price_total}</p>
+				</li>
+				<li>
+					<p>状态:</p>
+					<p>{$v.state}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</foreach>
+	<foreach from="{$ticket}" value="{$v}">
+		  <div id="cons" style="clear:both;">
+		<div class="top">
+			<span>门票</span> &nbsp;&nbsp;&nbsp;{$v.order_num}&nbsp;&nbsp;  |  &nbsp;&nbsp;&nbsp;{$v.order_time}
+		</div>
+		<div class="mid_h">
+			<ul>
+				<li><img src="__ROOT__/{$v.img}" width="150px;height:140px;"></li>
+				<li>
+					<p>{$v.name}</p>
+					<p>有效期:{$v.valid}</p>
+				</li>
+				<li>
+					<foreach from="{$v['type']}" value="{$v2}">
+					<p>￥{$v2.price}x{$v2.num}</p>
+				</foreach>
+				</li>
+				<li>
+					<p>总计:</p>
+					<p>￥{$v.price_total}</p>
+				</li>
+				<li>
+					<p>状态:</p>
+					<p>{$v.state}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</foreach>
+<div class="hotel_yuding_xia"></div>
+</div>
+<div id="serach_xia"></div>
+<load file="__TPL__/index/footer.html">
